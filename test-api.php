@@ -41,9 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     $product_amount_1 = $input['product_amount_1'];
     $product_ID_2 = $input['product_ID_2'];
     $product_amount_2 = $input['product_amount_2'];
-    $sql = "{CALL ProcessOrder(?, ?, ?)}";
-    // $params = array($customer_ID, $product_ID_1, $product_amount_1, $product_ID_2, $product_amount_2);
-    $params = array($customer_ID, $product_ID_1, $product_amount_1);
+    $sql = "{CALL ProcessOrder(?, ?, ?, ?, ?)}";
+    // $sql = "{CALL ProcessOrder(?, ?, ?)}";
+    $params = array($customer_ID, $product_ID_1, $product_amount_1, $product_ID_2, $product_amount_2);
+    // $params = array($customer_ID, $product_ID_1, $product_amount_1);
 
 
 
