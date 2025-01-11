@@ -32,16 +32,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // 檢查前端數據
-  if ( $input['action']=="buy" && isset($input['customer_ID'], $input['product_ID_1'], $input['product_amount_1_Alice']) ) {
+  if ( $input['action']=="buy" && isset($input['customer_ID'], $input['product_ID_1'], $input['product_amount_1']) ) {
 
 
     //取得執行 預存程序Database Engine 需要的參數v
     $customer_ID = $input['customer_ID'];
     $product_ID_1 = $input['product_ID_1'];
-    $product_amount_1_Alice = $input['product_amount_1_Alice'];
+    $product_amount_1 = $input['product_amount_1'];
+    $product_ID_2 = $input['product_ID_2'];
+    $product_amount_2 = $input['product_amount_2'];
     $sql = "{CALL ProcessOrder(?, ?, ?)}";
-    $params = array($customer_ID, $product_ID_1, $product_amount_1_Alice);
-
+    // $params = array($customer_ID, $product_ID_1, $product_amount_1, $product_ID_2, $product_amount_2);
+    $params = array($customer_ID, $product_ID_1, $product_amount_1);
 
 
 
