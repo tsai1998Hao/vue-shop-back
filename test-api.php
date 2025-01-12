@@ -4,6 +4,7 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
 header('Access-Control-Allow-Headers: Content-Type, Authorization');
 //解決CORS問題
+header('Access-Control-Allow-Headers: Content-Type');
 
 // 設置資料庫連接資訊
 $serverName = "127.0.0.1"; // 你的 SQL Server IP 或主機名
